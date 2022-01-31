@@ -12,19 +12,26 @@ import MyLibrary from './pages/MyLibrary';
 import BookDetailView from './pages/BookDetailView/BookDetailView';
 import Banner from './components/molecules/Banner/Banner';
 import Entrepreneurship from './pages/Entrepreneurship/Entrepreneurship'
+import Expore from './components/organisms/Explore/Explore'
+import Explore from './components/organisms/Explore/Explore';
+import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
 
 
 function App() {
   
   return (
     <div className="App">
-        
+
+      <Router>
+        <Routes>
+          <Route path='/' element={<MyLibrary />} />
+          <Route path='/entrepreneurship' element={<Entrepreneurship />} />
+          <Route path='/detailed' element={<BookDetailView />} />
+        </Routes>
+
+      </Router>
       
-       
-    
       
-     
-      <BookDetailView />
       
     
     </div>

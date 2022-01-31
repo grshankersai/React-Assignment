@@ -9,8 +9,10 @@ import { Grid } from '@mui/material';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import Typography from '../../atoms/Typography/Typography';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import {useNavigate} from 'react-router-dom';
 
 interface Props{
+    
     picturenumber:string;
     Heading:string;
     subheading:string;
@@ -22,15 +24,15 @@ interface Props{
 
 
 const Card = (props:Props)=>{
-
+    const navigate = useNavigate();
     return(
     <div id={Styles.maindiv} >
         <div id={Styles.imagediv}><img src={props.picturenumber} alt="image1" /></div>
 
     
             
-           
-            <Typography variant={'subtitle3'} content={props.Heading} styles={{margin:"10px"}} />
+           <div onClick={()=>{navigate('/detailed')}}><Typography variant={'subtitle3'} content={props.Heading} styles={{margin:"10px"}} /></div>
+            
            
             <Typography variant={'body1'} content={props.subheading} styles={{margin:"10px"}}/>
       
@@ -54,16 +56,21 @@ const Card = (props:Props)=>{
         
         <Grid container>
             <Grid item xs={12}>
-            <Button
+                
+                <Button
             size="large"
             variant="text"
             color="primary"
             
             fullWidth={true}
+           
           >
             {props.buttonText}
           </Button>
 
+
+    
+           
             </Grid>
             <Grid xs={12} textAlign={"right"}>
             <MoreHorizIcon />

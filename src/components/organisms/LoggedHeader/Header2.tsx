@@ -12,9 +12,13 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Styles from "./Header.module.css";
 import { Grid } from "@mui/material";
 import CustomAvatar from "../../atoms/Avator/Avator";
-import Typographys from "../../atoms/Typography/Typography";
+import Typographyp from "../../atoms/Typography/Typography";
+import Explore from "../Explore/Explore";
+import {useNavigate} from 'react-router-dom';
 
 const Header2 = () => {
+
+  const navigate = useNavigate();
   return (
     <div id={Styles.maindiv}>
       <Grid container>
@@ -26,14 +30,11 @@ const Header2 = () => {
           <SearchIcon className={Styles.icon} />
         </Grid>
         <Grid item xs={1}>
-         <div>
-          <span id={Styles.inblock}><Typography variant="body1"> Explore </Typography></span>
-          <KeyboardArrowDownIcon className={Styles.icon} />
-          </div>
+        <Explore/>
           
         </Grid>
-        <Grid item xs={4}>
-          <Typography variant="body1"> My Library </Typography>
+        <Grid item xs={4} onClick={()=>{navigate('/')}}>
+        <div className={Styles.lib}><Typographyp variant={"body1"} content={"My Library"} styles={{marginTop:"7px"}} /></div>
         </Grid>
         <Grid item xs={1}>
           <div>

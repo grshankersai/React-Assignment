@@ -5,12 +5,13 @@ import React from "react";
 import AppBar from "@mui/material/AppBar";
 
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
+import Typography from "../atoms/Typography/Typography";
 
 import SearchIcon from "@mui/icons-material/Search";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Styles from "./Header.module.css";
 import { Grid } from "@mui/material";
+import Explore from "./Explore/Explore";
 
 
 const Header = () => {
@@ -25,15 +26,18 @@ const Header = () => {
           <SearchIcon className={Styles.icon} />
         </Grid>
         <Grid item xs={1}>
-          <span id={Styles.inblock}><Typography variant="body1"> Explore </Typography></span>
-          <KeyboardArrowDownIcon className={Styles.icon} />
+        <Explore />
         </Grid>
-        <Grid item xs={4}>
-          <Typography variant="body1"> My Library </Typography>
+        <Grid item xs={4}  >
+          <div className={Styles.lib}><Typography variant={"body1"} content={"My Library"} styles={{marginTop:"7px"}} /></div>
+            
         </Grid>
         <Grid item xs={1}>
-          <Typography variant="body1" id={Styles.inblock}>Account</Typography>
+          <div className={Styles.root}>
+          <div className={Styles.text}><Typography variant={"body1"} content={"Account"} styles={{marginTop:"0px",marginBottom:'15px'}}/></div>
           <KeyboardArrowDownIcon />
+          </div>
+        
         </Grid>
         <Grid item xs={1}></Grid>
       </Grid>

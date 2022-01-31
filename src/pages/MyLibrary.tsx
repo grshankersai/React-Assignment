@@ -30,7 +30,7 @@ const MyLibrary = () => {
         justifyContent="space-around"
       >
         <Grid item xs={12} paddingLeft={22} className={Styles.mainheading}>
-          <Typographys variant='h1' content='My Library' /> 
+          <Typographys variant='h1' content='My Library' styles={{marginBottom:"10px"}} /> 
         </Grid>
         <Grid item xs={12} paddingLeft={22} className={Styles.mainheading}>
         <CustomTabs displayCards={formatTab} />
@@ -48,6 +48,7 @@ const MyLibrary = () => {
             return (
               <Grid item spacing={0} xs={4} paddingLeft={22} marginTop={10} marginBottom={10}>
                 <Card
+               
                   picturenumber={item.picturenumber}
                   Heading={item.Heading}
                   subheading={item.subheading}

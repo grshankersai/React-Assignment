@@ -51,6 +51,7 @@ const Entrepreneurship = () => {
                 return (
                     <Grid item xs={4}>
                         <Card
+                 
                       picturenumber={items.picturenumber}
                       Heading={items.Heading}
                       subheading={items.subheading}
@@ -77,6 +78,7 @@ const Entrepreneurship = () => {
                 return (
                     <Grid item xs={4}>
                         <Card
+                    
                       picturenumber={items.picturenumber}
                       Heading={items.Heading}
                       subheading={items.subheading}
@@ -106,6 +108,7 @@ const Entrepreneurship = () => {
                 return (
                     <Grid item xs={4}>
                         <Card
+                     
                       picturenumber={items.picturenumber}
                       Heading={items.Heading}
                       subheading={items.subheading}
