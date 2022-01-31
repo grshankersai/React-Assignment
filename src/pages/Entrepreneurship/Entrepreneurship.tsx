@@ -51,11 +51,10 @@ const Entrepreneurship = () => {
                 return (
                     <Grid item xs={4}>
                         <Card
-                    picturenumber={items.picturenumber}
-                    Heading={items.Heading}
-                    subheading={items.subheading}
-                    minuteread={items.minuteread}
-                  />
+                      picturenumber={items.picturenumber}
+                      Heading={items.Heading}
+                      subheading={items.subheading}
+                      minuteread={items.minuteread} buttonText={"Add to Library"}                  />
 
                     </Grid>
                   
@@ -78,11 +77,10 @@ const Entrepreneurship = () => {
                 return (
                     <Grid item xs={4}>
                         <Card
-                    picturenumber={items.picturenumber}
-                    Heading={items.Heading}
-                    subheading={items.subheading}
-                    minuteread={items.minuteread}
-                  />
+                      picturenumber={items.picturenumber}
+                      Heading={items.Heading}
+                      subheading={items.subheading}
+                      minuteread={items.minuteread} buttonText={"Add to Library"}                  />
 
                     </Grid>
                   
@@ -108,11 +106,10 @@ const Entrepreneurship = () => {
                 return (
                     <Grid item xs={4}>
                         <Card
-                    picturenumber={items.picturenumber}
-                    Heading={items.Heading}
-                    subheading={items.subheading}
-                    minuteread={items.minuteread}
-                  />
+                      picturenumber={items.picturenumber}
+                      Heading={items.Heading}
+                      subheading={items.subheading}
+                      minuteread={items.minuteread} buttonText={"Add to Library"}                  />
 
                     </Grid>
                   
