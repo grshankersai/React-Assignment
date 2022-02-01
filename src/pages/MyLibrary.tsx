@@ -16,6 +16,8 @@ const MyLibrary = () => {
 
   const [data,setData] = useState(mylist);
 
+  const [mybool,setMyBool] = useState(true);
+
   function formatTab(tab: string) {
     setTab(tab);
   }
@@ -49,9 +51,39 @@ const MyLibrary = () => {
       })
       
     }
-      
+    setMyBool((prev)=>{
+      return !prev;
+    });  
   }
 
+  const renderCards= ()=>{
+    return(
+      <Grid item xs={7}>
+      {data
+        .filter((item) => {
+          return item.readstatus == tabs;
+        })
+        .map((item) => {
+          return (
+            <div style={{margin:"20px",display:"inline-block"}}>
+              <Card
+                id={item.id}
+                picturenumber={item.picturenumber}
+                Heading={item.Heading}
+                subheading={item.subheading}
+                minuteread={item.minuteread}
+                buttonText={
+                  tabs == "Finished" ? "Read Again" : "Finished"
+                }
+                modifyData = {modifyData}
+              />
+            </div>
+          );
+        })}
+    </Grid>
+
+    );
+  }
 
   return (
     <div>
@@ -76,29 +108,7 @@ const MyLibrary = () => {
 
         <Grid container>
         <Grid item xs={1.1}></Grid>
-        <Grid item xs={7}>
-      {data
-        .filter((item) => {
-          return item.readstatus == tabs;
-        })
-        .map((item) => {
-          return (
-            <div style={{margin:"20px",display:"inline-block"}}>
-              <Card
-                id={item.id}
-                picturenumber={item.picturenumber}
-                Heading={item.Heading}
-                subheading={item.subheading}
-                minuteread={item.minuteread}
-                buttonText={
-                  tabs == "Finished" ? "Read Again" : "Finished"
-                }
-                modifyData = {modifyData}
-              />
-            </div>
-          );
-        })}
-    </Grid>
+          {mybool?renderCards():renderCards()}
 
           <Grid item xs={3}></Grid>
         </Grid>
