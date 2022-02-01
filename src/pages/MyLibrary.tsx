@@ -39,7 +39,7 @@ const MyLibrary = () => {
         </Grid>
 
         <Grid container>
-          <Grid item xs={2}></Grid>
+        <Grid item xs={1.1}></Grid>
           <Grid item xs={7}>
             {mylist
               .filter((item) => {

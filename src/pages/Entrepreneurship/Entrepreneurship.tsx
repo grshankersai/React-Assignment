@@ -43,7 +43,7 @@ const Entrepreneurship = () => {
 
         <Grid item xs={12} marginLeft={10}>
           <Grid container>
-            <Grid item xs={2}></Grid>
+            <Grid item xs={1.1}></Grid>
             <Grid item xs={8}>
             {data
               .filter((item) => {
@@ -97,7 +97,7 @@ const Entrepreneurship = () => {
 
         <Grid item xs={12} marginLeft={10}>
           <Grid container>
-          <Grid item xs={2}></Grid>
+          <Grid item xs={1.1}></Grid>
             <Grid item xs={8}>
             {data
               .filter((item) => {
@@ -155,7 +155,7 @@ const Entrepreneurship = () => {
         <Grid item xs={12} marginLeft={10} marginBottom={20}>
           <Grid container>
 
-          <Grid item xs={2}></Grid>
+          <Grid item xs={1.1}></Grid>
             <Grid item xs={8}>
             {data
               .filter((item) => {
