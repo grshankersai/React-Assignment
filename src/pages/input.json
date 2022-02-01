@@ -109,6 +109,17 @@
         "rtype":"justadded"
 
 
+    },{
+        "id":10,
+        "picturenumber":"pictures/pic1.png",
+        "Heading":"Beyond Entrepreneurship",
+        "subheading":"Jim Collins & Bill Lazier",
+        "minuteread":"13-minute read",
+        "totalreads":"",
+        "readstatus":"",
+        "rtype":"Trending"
+
+
     }
 
 ]

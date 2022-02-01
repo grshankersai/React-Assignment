@@ -29,12 +29,12 @@ const Header = () => {
         <Explore />
         </Grid>
         <Grid item xs={4}  >
-          <div className={Styles.lib}><Typography variant={"body1"} content={"My Library"} styles={{marginTop:"7px"}} /></div>
+          <div className={Styles.lib}><Typography variant={"body1"} content={"My Library"} styles={{marginTop:"7px" , cursor: "pointer"}} /></div>
             
         </Grid>
         <Grid item xs={1}>
           <div className={Styles.root}>
-          <div className={Styles.text}><Typography variant={"body1"} content={"Account"} styles={{marginTop:"0px",marginBottom:'15px'}}/></div>
+          <div className={Styles.text}><Typography variant={"body1"} content={"Account"} styles={{marginTop:"0px",marginBottom:'15px',cursor: "pointer"}}/></div>
           <KeyboardArrowDownIcon />
           </div>
         

@@ -11,6 +11,11 @@ import data from "../input.json";
 import Card from "../../components/molecules/Card/Card";
 
 const Entrepreneurship = () => {
+
+  const modifyData= (id:number)=>{
+    console.log(id);
+  }
+
   return (
     <div>
       <Header2 />
@@ -53,11 +58,11 @@ const Entrepreneurship = () => {
                 return (
                     <div style={{margin:"20px",display:"inline-block"}}>
                        <Card
-                 
+                 id={items.id}
                  picturenumber={items.picturenumber}
                  Heading={items.Heading}
                  subheading={items.subheading}
-                 minuteread={items.minuteread} buttonText={"Add to Library"}                  />
+                 minuteread={items.minuteread} buttonText={"Add to Library"}        modifyData = {modifyData}          />
 
                     </div>
                        
@@ -107,11 +112,11 @@ const Entrepreneurship = () => {
                 return (
                     <div style={{margin:"20px",display:"inline-block"}}>
                        <Card
-                 
+                 id={items.id}
                  picturenumber={items.picturenumber}
                  Heading={items.Heading}
                  subheading={items.subheading}
-                 minuteread={items.minuteread} buttonText={"Add to Library"}                  />
+                 minuteread={items.minuteread} buttonText={"Add to Library"}      modifyData = {modifyData}            />
 
                     </div>
                        
@@ -165,11 +170,11 @@ const Entrepreneurship = () => {
                 return (
                     <div style={{margin:"20px",display:"inline-block"}}>
                        <Card
-                 
+                 id={items.id}
                  picturenumber={items.picturenumber}
                  Heading={items.Heading}
                  subheading={items.subheading}
-                 minuteread={items.minuteread} buttonText={"Add to Library"}                  />
+                 minuteread={items.minuteread} buttonText={"Add to Library"}         modifyData = {modifyData}         />
 
                     </div>
                        

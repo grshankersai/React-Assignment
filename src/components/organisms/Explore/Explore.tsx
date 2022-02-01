@@ -34,9 +34,9 @@ const Menu = ()=>{
                 <Grid item xs={2}></Grid>
                 <Grid item xs={8}>
                    <Grid container padding={2}>
-                        <Grid item xs={4}><Typography variant={"body2"} content={"Explore by category"} /></Grid>
-                        <Grid item xs={4}><Typography variant={"body2"} content={"See recently added titles"} /></Grid>
-                        <Grid item xs={4}><Typography variant={"body2"} content={"See popular titles"} /></Grid>
+                        <Grid item xs={4}><Typography variant={"body2"} content={"Explore by category"} styles={{cursor: "pointer"}} /></Grid>
+                        <Grid item xs={4}><Typography variant={"body2"} content={"See recently added titles"} styles={{cursor: "pointer"}}/></Grid>
+                        <Grid item xs={4}><Typography variant={"body2"} content={"See popular titles"} styles={{cursor: "pointer"}} /></Grid>
 
                     </Grid> 
                     <Grid container>
@@ -134,7 +134,7 @@ const Explore = ()=>{
        style={fun1()}
         
         >
-            <div className={Styles.text}><Typography variant={"body1"} content={"Explore"} styles={{marginTop:"0px",marginBottom:'15px'}}/></div>
+            <div className={Styles.text}><Typography variant={"body1"} content={"Explore"} styles={{marginTop:"0px",marginBottom:'15px',cursor: "pointer"}}/></div>
             {arrowPosition?<KeyboardArrowDownIcon style={{marginTop:"5px"}}/>:<KeyboardArrowUpIcon style={{marginTop:"5px"}}/>} 
 
         </div>

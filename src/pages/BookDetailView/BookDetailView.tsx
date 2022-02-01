@@ -7,6 +7,8 @@ import TimeIcon from "@mui/icons-material/AccessTime";
 import CustomButton from "../../components/atoms/Button/Button";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import React from "react";
+import itemlist from '../input.json';
+import {useNavigate} from 'react-router-dom';
 
 const customTheme = createMuiTheme({
     palette: {
@@ -48,6 +50,7 @@ const useStyles = makeStyles({
 });
 
 const BookDetailView = () => {
+  const navigate = useNavigate();
   const Styles = useStyles();
   const value="synopsis";
 
@@ -102,7 +105,7 @@ const BookDetailView = () => {
             </CustomButton>
             <CustomButton
               variant="contained"
-              onClick={() => console.log("Hello")}
+              onClick={() => { itemlist[9].readstatus = "Finished"; navigate('/'); }}
               sx={{
                 color: "black",
                 backgroundColor: "#2CE080",

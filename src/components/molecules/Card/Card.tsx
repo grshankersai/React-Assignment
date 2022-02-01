@@ -12,12 +12,13 @@ import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import {useNavigate} from 'react-router-dom';
 
 interface Props{
-    
+    id:number;
     picturenumber:string;
     Heading:string;
     subheading:string;
     minuteread:string;
     buttonText:string;
+    modifyData: any;
     
     
 }
@@ -57,16 +58,19 @@ const Card = (props:Props)=>{
         <Grid container>
             <Grid item xs={12}>
                 
-                <Button
+                 <Button
             size="large"
             variant="text"
             color="primary"
             
             fullWidth={true}
+            onClick={()=>{props.modifyData(props.id)}}
            
           >
             {props.buttonText}
-          </Button>
+          </Button> 
+
+          {/* <button  onClick={(e)=>{console.log(props.id)}}>{props.buttonText}</button> */}
 
 
     

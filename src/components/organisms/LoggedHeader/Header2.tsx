@@ -34,7 +34,7 @@ const Header2 = () => {
           
         </Grid>
         <Grid item xs={4} onClick={()=>{navigate('/')}}>
-        <div className={Styles.lib}><Typographyp variant={"body1"} content={"My Library"} styles={{marginTop:"7px"}} /></div>
+        <div className={Styles.lib}><Typographyp variant={"body1"} content={"My Library"} styles={{marginTop:"7px",cursor: "pointer"}} /></div>
         </Grid>
         <Grid item xs={1}>
           <div>
