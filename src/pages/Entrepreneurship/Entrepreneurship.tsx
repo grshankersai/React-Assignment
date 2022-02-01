@@ -1,4 +1,4 @@
-import React, { MouseEventHandler } from "react";
+import React, { MouseEventHandler, useState } from "react";
 import Header2 from "../../components/organisms/LoggedHeader/Header2";
 import Footer from "../../components/molecules/footer/Footer";
 import Banner from "../../components/molecules/Banner/Banner";
@@ -12,9 +12,228 @@ import Card from "../../components/molecules/Card/Card";
 
 const Entrepreneurship = () => {
 
+
+  const [search,setSearch] = useState("");
+
   const modifyData= (id:number)=>{
     console.log(id);
   }
+
+  const searchRender = ()=>{
+
+    return(
+      <div>
+        <Grid item  xs={12} marginLeft={10}>
+        <Grid container>
+        <Grid item xs={1.1}></Grid>
+        <Grid item xs={8}>
+        {data
+          .filter((item) => {
+            return item.Heading.toLowerCase().includes(search.toLowerCase());
+          })
+          .map((items) => {
+            return (
+                <div style={{margin:"20px",display:"inline-block"}}>
+                   <Card
+             id={items.id}
+             picturenumber={items.picturenumber}
+             Heading={items.Heading}
+             subheading={items.subheading}
+             minuteread={items.minuteread} buttonText={"Add to Library"}        modifyData = {modifyData}          />
+
+                </div>
+                   
+
+              
+              
+            );
+          })}
+
+        </Grid>
+        <Grid item xs={2}></Grid>
+
+        </Grid>
+        </Grid>
+      </div>
+    )
+  }
+
+  const basicRender = ()=>{
+
+    return(
+
+     <div>
+        <Grid item xs={12} marginLeft={32} marginTop={10} marginBottom={10}>
+      <Typography variant={"h3"} content={"Trending blinks"}></Typography>
+    </Grid>
+
+    <Grid item xs={12} marginLeft={10}>
+      <Grid container>
+        <Grid item xs={1.1}></Grid>
+        <Grid item xs={8}>
+        {data
+          .filter((item) => {
+            return item.rtype == "Trending";
+          })
+          .map((items) => {
+            return (
+                <div style={{margin:"20px",display:"inline-block"}}>
+                   <Card
+             id={items.id}
+             picturenumber={items.picturenumber}
+             Heading={items.Heading}
+             subheading={items.subheading}
+             minuteread={items.minuteread} buttonText={"Add to Library"}        modifyData = {modifyData}          />
+
+                </div>
+                   
+
+              
+              
+            );
+          })}
+
+        </Grid>
+        <Grid item xs={2}></Grid>
+
+        {/* {data
+          .filter((item) => {
+            return item.rtype == "Trending";
+          })
+          .map((items) => {
+            return (
+                <Grid item xs={4}>
+                    <Card
+             
+                  picturenumber={items.picturenumber}
+                  Heading={items.Heading}
+                  subheading={items.subheading}
+                  minuteread={items.minuteread} buttonText={"Add to Library"}                  />
+
+                </Grid>
+              
+            );
+          })} */}
+      </Grid>
+    </Grid>
+
+    <Grid item xs={12} marginLeft={32} marginTop={10} marginBottom={10}>
+      <Typography variant={"h3"} content={"Just added"}></Typography>
+    </Grid>
+
+    <Grid item xs={12} marginLeft={10}>
+      <Grid container>
+      <Grid item xs={1.1}></Grid>
+        <Grid item xs={8}>
+        {data
+          .filter((item) => {
+            return item.rtype == "justadded";
+          })
+          .map((items) => {
+            return (
+                <div style={{margin:"20px",display:"inline-block"}}>
+                   <Card
+             id={items.id}
+             picturenumber={items.picturenumber}
+             Heading={items.Heading}
+             subheading={items.subheading}
+             minuteread={items.minuteread} buttonText={"Add to Library"}      modifyData = {modifyData}            />
+
+                </div>
+                   
+
+              
+              
+            );
+          })}
+
+        </Grid>
+        <Grid item xs={2}></Grid>
+
+        {/* {data
+          .filter((item) => {
+            return item.rtype == "justadded";
+          })
+          .map((items) => {
+            return (
+                <Grid item xs={4}>
+                    <Card
+                
+                  picturenumber={items.picturenumber}
+                  Heading={items.Heading}
+                  subheading={items.subheading}
+                  minuteread={items.minuteread} buttonText={"Add to Library"}                  />
+
+                </Grid>
+              
+            );
+          })} */}
+      </Grid>
+    </Grid>
+
+    <Grid item xs={12} marginLeft={32} marginTop={10} marginBottom={10}>
+      <Typography
+        variant={"h3"}
+        content={"Featured audio blinks"}
+      ></Typography>
+    </Grid>
+
+    <Grid item xs={12} marginLeft={10} marginBottom={20}>
+      <Grid container>
+
+      <Grid item xs={1.1}></Grid>
+        <Grid item xs={8}>
+        {data
+          .filter((item) => {
+            return item.audio;
+          })
+          .map((items) => {
+            return (
+                <div style={{margin:"20px",display:"inline-block"}}>
+                   <Card
+             id={items.id}
+             picturenumber={items.picturenumber}
+             Heading={items.Heading}
+             subheading={items.subheading}
+             minuteread={items.minuteread} buttonText={"Add to Library"}         modifyData = {modifyData}         />
+
+                </div>
+                   
+
+              
+              
+            );
+          })}
+
+        </Grid>
+        <Grid item xs={2}></Grid>
+
+        {/* {data
+          .filter((item) => {
+            return item.audio;
+          })
+          .map((items) => {
+            return (
+                <Grid item xs={4}>
+                    <Card
+                 
+                  picturenumber={items.picturenumber}
+                  Heading={items.Heading}
+                  subheading={items.subheading}
+                  minuteread={items.minuteread} buttonText={"Add to Library"}                  />
+
+                </Grid>
+              
+            );
+          })} */}
+      </Grid>
+    </Grid>
+     </div>
+
+    );
+  }
+
+
 
   return (
     <div>
@@ -38,175 +257,13 @@ const Entrepreneurship = () => {
               name="text"
               fullWidth={true}
               sx={{ position: "relative", left: "10%", width: "800px" }}
+              onChange={(e)=>{setSearch(e.target.value); console.log(search)}}
+              value={search}
             />
           </div>
         </Grid>
-
-        <Grid item xs={12} marginLeft={32} marginTop={10} marginBottom={10}>
-          <Typography variant={"h3"} content={"Trending blinks"}></Typography>
-        </Grid>
-
-        <Grid item xs={12} marginLeft={10}>
-          <Grid container>
-            <Grid item xs={1.1}></Grid>
-            <Grid item xs={8}>
-            {data
-              .filter((item) => {
-                return item.rtype == "Trending";
-              })
-              .map((items) => {
-                return (
-                    <div style={{margin:"20px",display:"inline-block"}}>
-                       <Card
-                 id={items.id}
-                 picturenumber={items.picturenumber}
-                 Heading={items.Heading}
-                 subheading={items.subheading}
-                 minuteread={items.minuteread} buttonText={"Add to Library"}        modifyData = {modifyData}          />
-
-                    </div>
-                       
-
-                  
-                  
-                );
-              })}
-
-            </Grid>
-            <Grid item xs={2}></Grid>
-
-            {/* {data
-              .filter((item) => {
-                return item.rtype == "Trending";
-              })
-              .map((items) => {
-                return (
-                    <Grid item xs={4}>
-                        <Card
-                 
-                      picturenumber={items.picturenumber}
-                      Heading={items.Heading}
-                      subheading={items.subheading}
-                      minuteread={items.minuteread} buttonText={"Add to Library"}                  />
-
-                    </Grid>
-                  
-                );
-              })} */}
-          </Grid>
-        </Grid>
-
-        <Grid item xs={12} marginLeft={32} marginTop={10} marginBottom={10}>
-          <Typography variant={"h3"} content={"Just added"}></Typography>
-        </Grid>
-
-        <Grid item xs={12} marginLeft={10}>
-          <Grid container>
-          <Grid item xs={1.1}></Grid>
-            <Grid item xs={8}>
-            {data
-              .filter((item) => {
-                return item.rtype == "justadded";
-              })
-              .map((items) => {
-                return (
-                    <div style={{margin:"20px",display:"inline-block"}}>
-                       <Card
-                 id={items.id}
-                 picturenumber={items.picturenumber}
-                 Heading={items.Heading}
-                 subheading={items.subheading}
-                 minuteread={items.minuteread} buttonText={"Add to Library"}      modifyData = {modifyData}            />
-
-                    </div>
-                       
-
-                  
-                  
-                );
-              })}
-
-            </Grid>
-            <Grid item xs={2}></Grid>
-
-            {/* {data
-              .filter((item) => {
-                return item.rtype == "justadded";
-              })
-              .map((items) => {
-                return (
-                    <Grid item xs={4}>
-                        <Card
-                    
-                      picturenumber={items.picturenumber}
-                      Heading={items.Heading}
-                      subheading={items.subheading}
-                      minuteread={items.minuteread} buttonText={"Add to Library"}                  />
-
-                    </Grid>
-                  
-                );
-              })} */}
-          </Grid>
-        </Grid>
-
-        <Grid item xs={12} marginLeft={32} marginTop={10} marginBottom={10}>
-          <Typography
-            variant={"h3"}
-            content={"Featured audio blinks"}
-          ></Typography>
-        </Grid>
-
-        <Grid item xs={12} marginLeft={10} marginBottom={20}>
-          <Grid container>
-
-          <Grid item xs={1.1}></Grid>
-            <Grid item xs={8}>
-            {data
-              .filter((item) => {
-                return item.audio;
-              })
-              .map((items) => {
-                return (
-                    <div style={{margin:"20px",display:"inline-block"}}>
-                       <Card
-                 id={items.id}
-                 picturenumber={items.picturenumber}
-                 Heading={items.Heading}
-                 subheading={items.subheading}
-                 minuteread={items.minuteread} buttonText={"Add to Library"}         modifyData = {modifyData}         />
-
-                    </div>
-                       
-
-                  
-                  
-                );
-              })}
-
-            </Grid>
-            <Grid item xs={2}></Grid>
-
-            {/* {data
-              .filter((item) => {
-                return item.audio;
-              })
-              .map((items) => {
-                return (
-                    <Grid item xs={4}>
-                        <Card
-                     
-                      picturenumber={items.picturenumber}
-                      Heading={items.Heading}
-                      subheading={items.subheading}
-                      minuteread={items.minuteread} buttonText={"Add to Library"}                  />
-
-                    </Grid>
-                  
-                );
-              })} */}
-          </Grid>
-        </Grid>
+          {search===""?basicRender():searchRender()}
+        
       </Grid>
 
       <Footer />

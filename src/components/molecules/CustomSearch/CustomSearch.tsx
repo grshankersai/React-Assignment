@@ -8,8 +8,8 @@ type CustomSearchProps = {
 const CustomSearch = ({onClick,title}:CustomSearchProps) => {
     return ( 
         <div>
-             <IconButton onClick={onClick} title={title}>
-                <Search />
+             <IconButton onClick={()=>{console.log(title)}} title={title}>
+                <Search onClick={(e)=>{console.log(e.target)}} />
             </IconButton>
         </div>
      );
