@@ -41,9 +41,36 @@ const Entrepreneurship = () => {
           <Typography variant={"h3"} content={"Trending blinks"}></Typography>
         </Grid>
 
-        <Grid item xs={12} marginLeft={32}>
+        <Grid item xs={12} marginLeft={10}>
           <Grid container>
+            <Grid item xs={2}></Grid>
+            <Grid item xs={8}>
             {data
+              .filter((item) => {
+                return item.rtype == "Trending";
+              })
+              .map((items) => {
+                return (
+                    <div style={{margin:"20px",display:"inline-block"}}>
+                       <Card
+                 
+                 picturenumber={items.picturenumber}
+                 Heading={items.Heading}
+                 subheading={items.subheading}
+                 minuteread={items.minuteread} buttonText={"Add to Library"}                  />
+
+                    </div>
+                       
+
+                  
+                  
+                );
+              })}
+
+            </Grid>
+            <Grid item xs={2}></Grid>
+
+            {/* {data
               .filter((item) => {
                 return item.rtype == "Trending";
               })
@@ -60,7 +87,7 @@ const Entrepreneurship = () => {
                     </Grid>
                   
                 );
-              })}
+              })} */}
           </Grid>
         </Grid>
 
@@ -68,9 +95,36 @@ const Entrepreneurship = () => {
           <Typography variant={"h3"} content={"Just added"}></Typography>
         </Grid>
 
-        <Grid item xs={12} marginLeft={32}>
+        <Grid item xs={12} marginLeft={10}>
           <Grid container>
+          <Grid item xs={2}></Grid>
+            <Grid item xs={8}>
             {data
+              .filter((item) => {
+                return item.rtype == "justadded";
+              })
+              .map((items) => {
+                return (
+                    <div style={{margin:"20px",display:"inline-block"}}>
+                       <Card
+                 
+                 picturenumber={items.picturenumber}
+                 Heading={items.Heading}
+                 subheading={items.subheading}
+                 minuteread={items.minuteread} buttonText={"Add to Library"}                  />
+
+                    </div>
+                       
+
+                  
+                  
+                );
+              })}
+
+            </Grid>
+            <Grid item xs={2}></Grid>
+
+            {/* {data
               .filter((item) => {
                 return item.rtype == "justadded";
               })
@@ -87,7 +141,7 @@ const Entrepreneurship = () => {
                     </Grid>
                   
                 );
-              })}
+              })} */}
           </Grid>
         </Grid>
 
@@ -98,9 +152,37 @@ const Entrepreneurship = () => {
           ></Typography>
         </Grid>
 
-        <Grid item xs={12} marginLeft={32} marginBottom={20}>
+        <Grid item xs={12} marginLeft={10} marginBottom={20}>
           <Grid container>
+
+          <Grid item xs={2}></Grid>
+            <Grid item xs={8}>
             {data
+              .filter((item) => {
+                return item.audio;
+              })
+              .map((items) => {
+                return (
+                    <div style={{margin:"20px",display:"inline-block"}}>
+                       <Card
+                 
+                 picturenumber={items.picturenumber}
+                 Heading={items.Heading}
+                 subheading={items.subheading}
+                 minuteread={items.minuteread} buttonText={"Add to Library"}                  />
+
+                    </div>
+                       
+
+                  
+                  
+                );
+              })}
+
+            </Grid>
+            <Grid item xs={2}></Grid>
+
+            {/* {data
               .filter((item) => {
                 return item.audio;
               })
@@ -117,7 +199,7 @@ const Entrepreneurship = () => {
                     </Grid>
                   
                 );
-              })}
+              })} */}
           </Grid>
         </Grid>
       </Grid>

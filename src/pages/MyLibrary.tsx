@@ -13,10 +13,8 @@ import Typographys from "../components/atoms/Typography/Typography";
 const MyLibrary = () => {
   const [tabs, setTab] = useState("currentlyReading");
 
- 
-
-  function formatTab(tab:string) {
-   setTab(tab);
+  function formatTab(tab: string) {
+    setTab(tab);
   }
 
   return (
@@ -30,16 +28,44 @@ const MyLibrary = () => {
         justifyContent="space-around"
       >
         <Grid item xs={12} paddingLeft={22} className={Styles.mainheading}>
-          <Typographys variant='h1' content='My Library' styles={{marginBottom:"10px"}} /> 
+          <Typographys
+            variant="h1"
+            content="My Library"
+            styles={{ marginBottom: "10px" }}
+          />
         </Grid>
         <Grid item xs={12} paddingLeft={22} className={Styles.mainheading}>
-        <CustomTabs displayCards={formatTab} />
+          <CustomTabs displayCards={formatTab} />
         </Grid>
 
-        
+        <Grid container>
+          <Grid item xs={2}></Grid>
+          <Grid item xs={7}>
+            {mylist
+              .filter((item) => {
+                return item.readstatus == tabs;
+              })
+              .map((item) => {
+                return (
+                  <div style={{margin:"20px",display:"inline-block"}}>
+                    <Card
+                      picturenumber={item.picturenumber}
+                      Heading={item.Heading}
+                      subheading={item.subheading}
+                      minuteread={item.minuteread}
+                      buttonText={
+                        tabs == "Finished" ? "Read Again" : "Finished"
+                      }
+                    />
+                  </div>
+                );
+              })}
+          </Grid>
 
-      
-        {
+          <Grid item xs={3}></Grid>
+        </Grid>
+
+        {/* {
         mylist
           .filter((item) => {
             return item.readstatus == tabs  ;
@@ -57,7 +83,7 @@ const MyLibrary = () => {
                 />
               </Grid>
             );
-          })}
+          })} */}
       </Grid>
 
       <Footer />
