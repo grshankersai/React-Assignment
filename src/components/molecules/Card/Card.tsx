@@ -18,8 +18,7 @@ interface Props{
     subheading:string;
     minuteread:string;
     buttonText:string;
-    modifyData: any;
-    
+    modifyData: any;   
     
 }
 
@@ -32,7 +31,7 @@ const Card = (props:Props)=>{
 
     
             
-           <div onClick={()=>{navigate('/detailed')}}><Typography variant={'subtitle3'} content={props.Heading} styles={{margin:"10px"}} /></div>
+           <div onClick={()=>{navigate('/detailed')}}><Typography variant={'subtitle3'} content={props.Heading} styles={{margin:"10px",cursor: "pointer"}} /></div>
             
            
             <Typography variant={'body1'} content={props.subheading} styles={{margin:"10px"}}/>

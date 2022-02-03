@@ -1,6 +1,6 @@
 import { Button, makeStyles } from "@material-ui/core";
 import { ButtonGroup, Grid, Typography } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Card from "../components/molecules/Card/Card";
 import Footer from "../components/molecules/footer/Footer";
 import Header from "../components/organisms/Header";
@@ -9,6 +9,7 @@ import Styles from "./MyLibrary.module.css";
 import CustomTabs from "../components/organisms/Tabs/Tabs";
 import Header2 from "../components/organisms/LoggedHeader/Header2";
 import Typographys from "../components/atoms/Typography/Typography";
+import api from '../api/books';
 
 
 const MyLibrary = () => {
@@ -17,6 +18,27 @@ const MyLibrary = () => {
   const [data,setData] = useState(mylist);
 
   const [mybool,setMyBool] = useState(true);
+
+  // API CALL:
+
+  const retrieveBooks = async ()=>{
+    const response = await api.get('/books');
+    return response.data;
+  }
+
+  useEffect(()=>{
+
+    const getAllBooks = async()=>{
+      const allBooks = await retrieveBooks();
+      if(allBooks)
+      setData(allBooks);
+    }
+
+    getAllBooks();
+},[])
+
+
+//-------------
 
   function formatTab(tab: string) {
     setTab(tab);
