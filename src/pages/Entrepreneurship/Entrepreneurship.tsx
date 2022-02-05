@@ -9,7 +9,8 @@ import Styles from "./Entrepreneurship.module.css";
 import Typography from "../../components/atoms/Typography/Typography";
 import data from "../input.json";
 import Card from "../../components/molecules/Card/Card";
-
+import AddIcon from '@mui/icons-material/Add';
+import Card2 from '../../components/molecules/Card2/Card2'
 const Entrepreneurship = () => {
 
 
@@ -17,6 +18,7 @@ const Entrepreneurship = () => {
 
   const modifyData= (id:number)=>{
     console.log(id);
+    
   }
 
   const searchRender = ()=>{
@@ -29,17 +31,18 @@ const Entrepreneurship = () => {
         <Grid item xs={8}>
         {data
           .filter((item) => {
-            return item.Heading.toLowerCase().includes(search.toLowerCase());
+            return (item.Heading.toLowerCase().includes(search.toLowerCase()))||(item.subheading.toLowerCase().includes(search.toLowerCase()));
           })
           .map((items) => {
             return (
                 <div style={{margin:"20px",display:"inline-block"}}>
-                   <Card
+                   <Card2
              id={items.id}
              picturenumber={items.picturenumber}
              Heading={items.Heading}
              subheading={items.subheading}
-             minuteread={items.minuteread} buttonText={"Add to Library"}        modifyData = {modifyData}          />
+             minuteread={items.minuteread} buttonText={"+ Add to Library"}        modifyData = {modifyData}    
+             totalreads={items.totalreads} readStatus={items.readstatus}     />
 
                 </div>
                    
@@ -63,7 +66,7 @@ const Entrepreneurship = () => {
     return(
 
      <div>
-        <Grid item xs={12} marginLeft={32} marginTop={10} marginBottom={10}>
+        <Grid item xs={12} marginLeft={32} marginTop={5} marginBottom={0}>
       <Typography variant={"h3"} content={"Trending blinks"}></Typography>
     </Grid>
 
@@ -78,12 +81,13 @@ const Entrepreneurship = () => {
           .map((items) => {
             return (
                 <div style={{margin:"20px",display:"inline-block"}}>
-                   <Card
+                   <Card2
              id={items.id}
              picturenumber={items.picturenumber}
              Heading={items.Heading}
              subheading={items.subheading}
-             minuteread={items.minuteread} buttonText={"Add to Library"}        modifyData = {modifyData}          />
+             minuteread={items.minuteread} buttonText={"+ Add to Library"}        modifyData = {modifyData}
+             totalreads={items.totalreads}   readStatus={items.readstatus}       />
 
                 </div>
                    
@@ -117,7 +121,7 @@ const Entrepreneurship = () => {
       </Grid>
     </Grid>
 
-    <Grid item xs={12} marginLeft={32} marginTop={10} marginBottom={10}>
+    <Grid item xs={12} marginLeft={32} marginTop={5} marginBottom={0}>
       <Typography variant={"h3"} content={"Just added"}></Typography>
     </Grid>
 
@@ -132,12 +136,12 @@ const Entrepreneurship = () => {
           .map((items) => {
             return (
                 <div style={{margin:"20px",display:"inline-block"}}>
-                   <Card
+                   <Card2
              id={items.id}
              picturenumber={items.picturenumber}
              Heading={items.Heading}
              subheading={items.subheading}
-             minuteread={items.minuteread} buttonText={"Add to Library"}      modifyData = {modifyData}            />
+             minuteread={items.minuteread} buttonText={"+ Add to Library"}  readStatus={items.readstatus}    modifyData = {modifyData}    totalreads={items.totalreads}        />
 
                 </div>
                    
@@ -171,7 +175,7 @@ const Entrepreneurship = () => {
       </Grid>
     </Grid>
 
-    <Grid item xs={12} marginLeft={32} marginTop={10} marginBottom={10}>
+    <Grid item xs={12} marginLeft={32} marginTop={5} marginBottom={0}>
       <Typography
         variant={"h3"}
         content={"Featured audio blinks"}
@@ -190,12 +194,12 @@ const Entrepreneurship = () => {
           .map((items) => {
             return (
                 <div style={{margin:"20px",display:"inline-block"}}>
-                   <Card
+                   <Card2
              id={items.id}
              picturenumber={items.picturenumber}
              Heading={items.Heading}
              subheading={items.subheading}
-             minuteread={items.minuteread} buttonText={"Add to Library"}         modifyData = {modifyData}         />
+             minuteread={items.minuteread} buttonText={"+ Add to Library"}    readStatus={items.readstatus}    modifyData = {modifyData}     totalreads={items.totalreads}    />
 
                 </div>
                    
@@ -238,7 +242,7 @@ const Entrepreneurship = () => {
   return (
     <div>
       <Header2 />
-      <Grid container>
+      <Grid container> 
         <Grid
           item
           xs={12}
@@ -256,7 +260,7 @@ const Entrepreneurship = () => {
               placeholder="Search by Title or Author"
               name="text"
               fullWidth={true}
-              sx={{ position: "relative", left: "10%", width: "800px" }}
+              sx={{ position: "relative", left: "10%", width: "650px" }}
               onChange={(e)=>{setSearch(e.target.value); console.log(search)}}
               value={search}
             />

@@ -22,7 +22,7 @@ const MyLibrary = () => {
   // API CALL:
 
   const retrieveBooks = async ()=>{
-    const response = await api.get('/books');
+    const response = await api.get('/books'); 
     return response.data;
   }
 
@@ -98,6 +98,8 @@ const MyLibrary = () => {
                   tabs == "Finished" ? "Read Again" : "Finished"
                 }
                 modifyData = {modifyData}
+                totalreads={item.totalreads}
+                currentTab={tabs}
               />
             </div>
           );
