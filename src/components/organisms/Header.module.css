@@ -35,3 +35,7 @@
 .root:hover{
     border-bottom: 2px solid #2CE080;
 }
+
+#inblock{
+    display: inline-block;
+}

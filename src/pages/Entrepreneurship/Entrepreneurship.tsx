@@ -11,6 +11,7 @@ import data from "../input.json";
 import Card from "../../components/molecules/Card/Card";
 import AddIcon from '@mui/icons-material/Add';
 import Card2 from '../../components/molecules/Card2/Card2'
+import Header from "../../components/organisms/Header";
 const Entrepreneurship = () => {
 
 
@@ -241,7 +242,7 @@ const Entrepreneurship = () => {
 
   return (
     <div>
-      <Header2 />
+      <Header />
       <Grid container> 
         <Grid
           item

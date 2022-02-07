@@ -9,6 +9,7 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import React from "react";
 import itemlist from '../input.json';
 import {useNavigate} from 'react-router-dom';
+import Header from "../../components/organisms/Header";
 
 const customTheme = createMuiTheme({
     palette: {
@@ -49,17 +50,21 @@ const useStyles = makeStyles({
   },
 });
 
+
+
 const BookDetailView = () => {
   const navigate = useNavigate();
   const Styles = useStyles();
   const value="synopsis";
 
+  
+
   return (
     <ThemeProvider theme={customTheme}>
-      <Header2 />
+      <Header />
       <Grid container spacing={3}>
         <Grid item xs={7} marginLeft={22} marginBottom={5}>
-          <Typographys variant={"body2"} content={"Get the key ideas from"} />
+          <Typographys data-testid="Test1" variant={"body2"} content={"Get the key ideas from"} />
         </Grid>
         <Grid item xs={6} marginLeft={22}>
           <div>

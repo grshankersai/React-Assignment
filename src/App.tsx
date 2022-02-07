@@ -15,9 +15,19 @@ import Entrepreneurship from './pages/Entrepreneurship/Entrepreneurship'
 import Expore from './components/organisms/Explore/Explore'
 import Explore from './components/organisms/Explore/Explore';
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
-
+import {useAuth0} from '@auth0/auth0-react';
+import Box from '@mui/material/Box';
+import LinearProgress from '@mui/material/LinearProgress';
 
 function App() {
+
+  const {isLoading} = useAuth0();
+
+  if(isLoading){
+    return (<Box sx={{ width: '100%' }}>
+    <LinearProgress />
+  </Box>)
+  }
   
   return (
     <div className="App">

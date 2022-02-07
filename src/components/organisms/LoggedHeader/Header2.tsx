@@ -16,7 +16,20 @@ import Typographyp from "../../atoms/Typography/Typography";
 import Explore from "../Explore/Explore";
 import {useNavigate} from 'react-router-dom';
 
+import {useAuth0} from '@auth0/auth0-react';
+
 const Header2 = () => {
+
+  const {loginWithRedirect , logout , user , isAuthenticated} = useAuth0();
+
+  const Login = ()=>{
+    loginWithRedirect();
+    console.log(user);
+  }
+
+  const Logout = ()=>{
+    logout();
+  } 
 
   const navigate = useNavigate();
   return (
@@ -40,8 +53,8 @@ const Header2 = () => {
           <div>
           <Typography variant="body1" id={Styles.inblock}><CustomAvatar/></Typography>
           <KeyboardArrowDownIcon />
-          </div>
-          
+          </div> 
+        
         </Grid>
         <Grid item xs={1}></Grid>
       </Grid>
