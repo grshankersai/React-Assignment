@@ -26,7 +26,7 @@ function App() {
   if(isLoading){
     return (<Box sx={{ width: '100%' }}>
     <LinearProgress />
-  </Box>)
+  </Box >)
   }
   
   return (
