@@ -68,4 +68,12 @@ describe("Tests for Book detailed View Page",()=>{
           fireEvent.click(btn);
         expect(window.location.pathname).toBe("/"); 
       })
+
+      it("Navigate Function ",()=>{
+        render(<BookInfo />);
+        const btns = screen.getByText('Finished');
+        fireEvent.click(btns);
+        expect(window.location.pathname).toBe("/"); 
+
+      })
 }) 
