@@ -11,6 +11,7 @@ const MockExploreDialog = () => {
       </BrowserRouter>
     );
   };
+  const mouseFun = jest.fn();
 
   describe("Explore-Tests",()=>{
 
@@ -40,6 +41,13 @@ const MockExploreDialog = () => {
         fireEvent.click(entrepreneurshipCategory);
         expect(window.location.pathname).toBe("/entrepreneurship"); 
       });
+
+      test("Mouse over and mouse out events",()=>{
+        render(<MockExploreDialog />);
+        const explore1 = screen.getByTestId("explore-button");
+        fireEvent.mouseOver(explore1);
+        fireEvent.mouseOut(explore1);
+      })
 
 
 
