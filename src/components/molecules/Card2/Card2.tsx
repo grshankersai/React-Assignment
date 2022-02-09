@@ -31,12 +31,12 @@ const Card2 = (props:Props)=>{
 
     
             
-           <div onClick={()=>{navigate('/detailed')}}><Typography variant={'subtitle3'} content={props.Heading} styles={{margin:"10px",cursor: "pointer"}} /></div>
+           <div data-testid="Headnav" onClick={()=>{navigate('/detailed')}}><Typography variant={'subtitle3'} content={props.Heading} styles={{margin:"10px",cursor: "pointer"}} /></div>
             
            
             <Typography variant={'body1'} content={props.subheading} styles={{margin:"10px"}}/>
       
-        
+         
         
         
         

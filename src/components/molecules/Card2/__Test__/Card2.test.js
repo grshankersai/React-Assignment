@@ -67,4 +67,12 @@ describe("Test Cases for the Card Component", () => {
     fireEvent.click(btn);
   })
 
+  it("Navigation activity in card",()=>{
+    render(<Card1/>);
+    const HeadNav = screen.getByTestId("Headnav");
+    fireEvent.click(HeadNav);
+    expect(window.location.pathname).toBe("/detailed"); 
+
+  })
+
 });

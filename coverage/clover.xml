@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1644423090325" clover="3.2.0">
-  <project timestamp="1644423090325" name="All files">
-    <metrics statements="182" coveredstatements="96" conditionals="44" coveredconditionals="25" methods="78" coveredmethods="49" elements="304" coveredelements="170" complexity="0" loc="182" ncloc="182" packages="21" files="38" classes="38"/>
+<coverage generated="1644424085209" clover="3.2.0">
+  <project timestamp="1644424085209" name="All files">
+    <metrics statements="182" coveredstatements="99" conditionals="44" coveredconditionals="25" methods="78" coveredmethods="52" elements="304" coveredelements="176" complexity="0" loc="182" ncloc="182" packages="21" files="38" classes="38"/>
     <package name="src">
       <metrics statements="17" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="3" coveredmethods="0"/>
       <file name="App.tsx" path="C:\Users\G R SHANKER SAI\Desktop\ZEMOSO\TypeScript+React_UZ\Blinkist_Project\my-app\src\App.tsx">
@@ -135,7 +135,7 @@
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="Typography.tsx" path="C:\Users\G R SHANKER SAI\Desktop\ZEMOSO\TypeScript+React_UZ\Blinkist_Project\my-app\src\components\atoms\Typography\Typography.tsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="9" count="526" type="stmt"/>
+        <line num="9" count="546" type="stmt"/>
       </file>
     </package>
     <package name="src.components.molecules.Banner">
@@ -152,7 +152,7 @@
       </file>
     </package>
     <package name="src.components.molecules.Card">
-      <metrics statements="9" coveredstatements="4" conditionals="4" coveredconditionals="3" methods="4" coveredmethods="1"/>
+      <metrics statements="9" coveredstatements="6" conditionals="4" coveredconditionals="3" methods="4" coveredmethods="3"/>
       <file name="Card.stories.tsx" path="C:\Users\G R SHANKER SAI\Desktop\ZEMOSO\TypeScript+React_UZ\Blinkist_Project\my-app\src\components\molecules\Card\Card.stories.tsx">
         <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="13" count="0" type="stmt"/>
@@ -160,24 +160,24 @@
         <line num="17" count="0" type="stmt"/>
       </file>
       <file name="Card.tsx" path="C:\Users\G R SHANKER SAI\Desktop\ZEMOSO\TypeScript+React_UZ\Blinkist_Project\my-app\src\components\molecules\Card\Card.tsx">
-        <metrics statements="6" coveredstatements="4" conditionals="4" coveredconditionals="3" methods="3" coveredmethods="1"/>
+        <metrics statements="6" coveredstatements="6" conditionals="4" coveredconditionals="3" methods="3" coveredmethods="3"/>
         <line num="24" count="2" type="stmt"/>
-        <line num="25" count="20" type="stmt"/>
-        <line num="26" count="18" type="cond" truecount="1" falsecount="1"/>
-        <line num="27" count="18" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="85" count="0" type="stmt"/>
+        <line num="25" count="23" type="stmt"/>
+        <line num="26" count="21" type="cond" truecount="1" falsecount="1"/>
+        <line num="27" count="21" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="85" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.components.molecules.Card2">
-      <metrics statements="6" coveredstatements="5" conditionals="10" coveredconditionals="10" methods="3" coveredmethods="2"/>
+      <metrics statements="6" coveredstatements="6" conditionals="10" coveredconditionals="10" methods="3" coveredmethods="3"/>
       <file name="Card2.tsx" path="C:\Users\G R SHANKER SAI\Desktop\ZEMOSO\TypeScript+React_UZ\Blinkist_Project\my-app\src\components\molecules\Card2\Card2.tsx">
-        <metrics statements="6" coveredstatements="5" conditionals="10" coveredconditionals="10" methods="3" coveredmethods="2"/>
+        <metrics statements="6" coveredstatements="6" conditionals="10" coveredconditionals="10" methods="3" coveredmethods="3"/>
         <line num="25" count="2" type="stmt"/>
-        <line num="26" count="62" type="stmt"/>
-        <line num="27" count="60" type="cond" truecount="2" falsecount="0"/>
-        <line num="28" count="60" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
+        <line num="26" count="64" type="stmt"/>
+        <line num="27" count="62" type="cond" truecount="2" falsecount="0"/>
+        <line num="28" count="62" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
         <line num="86" count="1" type="cond" truecount="2" falsecount="0"/>
       </file>
     </package>

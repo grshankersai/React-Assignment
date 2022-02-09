@@ -1,8 +1,9 @@
-import { render, screen } from "@testing-library/react";
+import {fireEvent, render, screen } from "@testing-library/react";
 import React from "react";
 import Card from "../Card";
 import { BrowserRouter } from "react-router-dom";
 
+const mockFun = jest.fn();
 const Card1 = () => {
   return (
     <BrowserRouter>
@@ -14,10 +15,13 @@ const Card1 = () => {
         minuteread={"13-minute read"}
         totalreads={""}
         buttonText={"Finish"}
+        modifyData={mockFun}
       />
     </BrowserRouter>
   );
 };
+
+
 
 describe("Test Cases for the Card Component", () => {
   it("Check if the Card image gets rendered", () => {
@@ -54,6 +58,23 @@ describe("Test Cases for the Card Component", () => {
       render(<Card1/>)
       const tReads = screen.queryByText("1.7k Reads");
       expect(tReads).toBeFalsy();
+  })
+
+  it("Navigation activity in card",()=>{
+    render(<Card1/>);
+    const HeadNav = screen.getByTestId("Headnav");
+    fireEvent.click(HeadNav);
+    expect(window.location.pathname).toBe("/detailed"); 
+
+  })
+
+  it("Check the button",()=>{
+    render(<Card1/>);
+    const Btn = screen.getByTestId("final-btn");
+    fireEvent.click(Btn);
+    expect(screen.getByText("Finish")).toBeInTheDocument();
+
+
   })
 
 });

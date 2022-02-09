@@ -10,7 +10,7 @@ import {useNavigate} from 'react-router-dom';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 interface Props{
     id:number;
-    picturenumber:string;
+    picturenumber:string; 
     Heading:string;
     subheading:string;
     minuteread:string;
@@ -30,7 +30,7 @@ const Card = (props:Props)=>{
 
     
             
-           <div onClick={()=>{navigate('/detailed')}}><Typography variant={'subtitle3'} content={props.Heading} styles={{margin:"10px",cursor: "pointer"}} /></div>
+           <div data-testid="Headnav" onClick={()=>{navigate('/detailed')}}><Typography variant={'subtitle3'} content={props.Heading} styles={{margin:"10px",cursor: "pointer"}} /></div>
             
            
             <Typography variant={'body1'} content={props.subheading} styles={{margin:"10px"}}/>
@@ -82,7 +82,7 @@ const Card = (props:Props)=>{
            
             </Grid> */}
             <Grid xs={12} marginBottom={1} >
-                <button className={Styles.buttonsty} onClick={()=>{props.modifyData(props.id)}}> {props.buttonText} </button>
+                <button data-testid="final-btn" className={Styles.buttonsty} onClick={()=>{props.modifyData(props.id)}}> {props.buttonText} </button>
 
             </Grid>
 
