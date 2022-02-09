@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">66.66% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>4/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/10</span>
+                <span class='fraction'>5/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">33.33% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>1/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">66.66% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/6</span>
+                <span class='fraction'>4/6</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -191,10 +191,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -295,11 +295,11 @@ interface Props{
 }
 &nbsp;
 &nbsp;
-const Card2 = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(p</span>rops:Props)=&gt;{</span>
-    const navigate = <span class="cstat-no" title="statement not covered" >useNavigate();</span>
-    const mainstyle = <span class="cstat-no" title="statement not covered" >(props.readStatus != 'currentlyReading')?Styles.maindiv:Styles.maindiva;</span>
-<span class="cstat-no" title="statement not covered" >    return(</span>
-    &lt;div id={mainstyle} style={{borderBottom:(props.readStatus != 'currentlyReading')?"1px solid #e1ecfc":"10px solid #F1F6F4"}} &gt;
+const Card2 = (props:Props)=&gt;{
+    const navigate = useNavigate();
+    const mainstyle = (props.readStatus != 'currentlyReading')?Styles.maindiv:<span class="branch-1 cbranch-no" title="branch not covered" >Styles.maindiva;</span>
+    return(
+    &lt;div id={mainstyle} style={{borderBottom:(props.readStatus != 'currentlyReading')?"1px solid #e1ecfc":<span class="branch-1 cbranch-no" title="branch not covered" >"10px solid #F1F6F4"}</span>} &gt;
         &lt;div id={Styles.imagediv}&gt;&lt;img src={props.picturenumber} alt="image1" /&gt;&lt;/div&gt;
 &nbsp;
     
@@ -323,7 +323,7 @@ const Card2 = <span class="cstat-no" title="statement not covered" ><span class=
                 &lt;Grid item xs={5} textAlign={'left'}&gt;&lt;Typography variant={'caption3'} content={props.minuteread} styles={{marginTop:"3px"}}/&gt;&lt;/Grid&gt;
                 &lt;Grid item xs={1}&gt;&lt;/Grid&gt;
                 
-                &lt;Grid item xs={1} style={{display:(props.totalreads=="" )?"none":"block"}}&gt; &lt;PermIdentityIcon/&gt;&lt;/Grid&gt;
+                &lt;Grid item xs={1} style={{display:(props.totalreads=="" )?"none":<span class="branch-1 cbranch-no" title="branch not covered" >"block"}</span>}&gt; &lt;PermIdentityIcon/&gt;&lt;/Grid&gt;
                 &lt;Grid item xs={4} textAlign={'left'}&gt;&lt;Typography variant={'caption3'} content={props.totalreads} styles={{marginTop:"3px"}}/&gt;&lt;/Grid&gt;
  
             &lt;/Grid&gt;
@@ -356,11 +356,11 @@ const Card2 = <span class="cstat-no" title="statement not covered" ><span class=
            
             &lt;/Grid&gt; */}
             &lt;Grid xs={12} marginBottom={1}   &gt;
-                &lt;button className={Styles.buttonsty}style={{visibility:(props.readStatus == 'currentlyReading')?"hidden":"visible"}} onClick={<span class="fstat-no" title="function not covered" >()</span>=&gt;{<span class="cstat-no" title="statement not covered" >props.modifyData(props.id)}</span>}&gt; {props.buttonText} &lt;/button&gt;
+                &lt;button className={Styles.buttonsty}style={{visibility:(props.readStatus == 'currentlyReading')?<span class="branch-0 cbranch-no" title="branch not covered" >"hidden":</span>"visible"}} onClick={<span class="fstat-no" title="function not covered" >()</span>=&gt;{<span class="cstat-no" title="statement not covered" >props.modifyData(props.id)}</span>}&gt; {props.buttonText} &lt;/button&gt;
 &nbsp;
             &lt;/Grid&gt;
 &nbsp;
-            &lt;Grid xs={12} textAlign={"right"} style={{visibility:(props.readStatus != 'currentlyReading')?"hidden":"visible"}}&gt;
+            &lt;Grid xs={12} textAlign={"right"} style={{visibility:(props.readStatus != 'currentlyReading')?"hidden":<span class="branch-1 cbranch-no" title="branch not covered" >"visible"}</span>}&gt;
             &lt;MoreHorizIcon /&gt;
             &lt;/Grid&gt;
         &lt;/Grid&gt;
@@ -382,7 +382,7 @@ export default Card2;</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Wed Feb 09 2022 15:38:53 GMT+0530 (India Standard Time)
+                at Wed Feb 09 2022 16:30:27 GMT+0530 (India Standard Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>
