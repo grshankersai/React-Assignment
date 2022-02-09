@@ -83,7 +83,7 @@ const Card2 = (props:Props)=>{
            
             </Grid> */}
             <Grid xs={12} marginBottom={1}   >
-                <button className={Styles.buttonsty}style={{visibility:(props.readStatus == 'currentlyReading')?"hidden":"visible"}} onClick={()=>{props.modifyData(props.id)}}> {props.buttonText} </button>
+             <button data-testid="final-btn" className={Styles.buttonsty}style={{visibility:(props.readStatus == 'currentlyReading')?"hidden":"visible"}} onClick={()=>{props.modifyData(props.id)}}> {props.buttonText} </button>
 
             </Grid>
 

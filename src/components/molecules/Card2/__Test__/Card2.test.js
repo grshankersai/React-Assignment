@@ -1,7 +1,9 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import React from "react";
 import Card from "../Card2";
 import { BrowserRouter } from "react-router-dom";
+
+const mockFun = jest.fn();
 
 const Card1 = () => {
   return (
@@ -14,6 +16,8 @@ const Card1 = () => {
         minuteread={"13-minute read"}
         totalreads={""}
         buttonText={"Finish"}
+        readStatus={"Finished"}
+        modifyData={mockFun}
       />
     </BrowserRouter>
   );
@@ -54,6 +58,13 @@ describe("Test Cases for the Card Component", () => {
       render(<Card1/>)
       const tReads = screen.queryByText("1.7k Reads");
       expect(tReads).toBeFalsy();
+  })
+
+  it("Check for the button",()=>{
+    render(<Card1/>);
+    const btn = screen.getByTestId("final-btn");
+    expect(btn).toBeVisible();
+    fireEvent.click(btn);
   })
 
 });
