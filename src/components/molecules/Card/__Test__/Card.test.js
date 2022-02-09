@@ -16,6 +16,7 @@ const Card1 = () => {
         totalreads={""}
         buttonText={"Finish"}
         modifyData={mockFun}
+        currentTab={'Finished'}
       />
     </BrowserRouter>
   );
@@ -75,6 +76,12 @@ describe("Test Cases for the Card Component", () => {
     expect(screen.getByText("Finish")).toBeInTheDocument();
 
 
+  })
+
+  it('Tab Render Check::',()=>{
+    render(<Card1/>);
+    const cont = screen.getByTestId('mainDiv');
+    expect(cont.id).toBe('maindiv');
   })
 
 });

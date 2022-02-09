@@ -20,12 +20,12 @@ interface Props{
     currentTab?:any;
 }
 
-
+ 
 const Card = (props:Props)=>{
     const navigate = useNavigate();
     const mainstyle = (props.currentTab == 'Finished')?Styles.maindiv:Styles.maindiva;
     return(
-    <div id={mainstyle}  >
+    <div id={mainstyle} data-testid="mainDiv" >
         <div id={Styles.imagediv}><img src={props.picturenumber} alt="image1" /></div>
 
     
