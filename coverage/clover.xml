@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1644401013689" clover="3.2.0">
-  <project timestamp="1644401013689" name="All files">
-    <metrics statements="200" coveredstatements="26" conditionals="50" coveredconditionals="2" methods="87" coveredmethods="14" elements="337" coveredelements="42" complexity="0" loc="200" ncloc="200" packages="22" files="39" classes="39"/>
+<coverage generated="1644401333199" clover="3.2.0">
+  <project timestamp="1644401333200" name="All files">
+    <metrics statements="190" coveredstatements="26" conditionals="50" coveredconditionals="2" methods="83" coveredmethods="14" elements="323" coveredelements="42" complexity="0" loc="190" ncloc="190" packages="21" files="38" classes="38"/>
     <package name="src">
       <metrics statements="17" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="3" coveredmethods="0"/>
       <file name="App.tsx" path="C:\Users\G R SHANKER SAI\Desktop\ZEMOSO\TypeScript+React_UZ\Blinkist_Project\my-app\src\App.tsx">
@@ -250,22 +250,6 @@
         <line num="123" count="0" type="stmt"/>
         <line num="127" count="0" type="stmt"/>
         <line num="131" count="0" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.components.organisms.LoggedHeader">
-      <metrics statements="10" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
-      <file name="Header2.tsx" path="C:\Users\G R SHANKER SAI\Desktop\ZEMOSO\TypeScript+React_UZ\Blinkist_Project\my-app\src\components\organisms\LoggedHeader\Header2.tsx">
-        <metrics statements="10" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="31" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="49" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.components.organisms.Tabs">
