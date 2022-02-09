@@ -1,4 +1,4 @@
-import { Button, makeStyles } from "@material-ui/core";
+
 import { ButtonGroup, Grid, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import Card from "../components/molecules/Card/Card";
@@ -7,7 +7,7 @@ import Header from "../components/organisms/Header";
 import mylist from "./input.json";
 import Styles from "./MyLibrary.module.css";
 import CustomTabs from "../components/organisms/Tabs/Tabs";
-import Header2 from "../components/organisms/LoggedHeader/Header2";
+
 import Typographys from "../components/atoms/Typography/Typography";
 import api from '../api/books';
 

@@ -18,7 +18,7 @@ interface Props{
     subheading:string;
     minuteread:string;
     buttonText:string;
-    modifyData: any;   
+    modifyData?: any;   
     totalreads:string;
     currentTab?:any;
 }

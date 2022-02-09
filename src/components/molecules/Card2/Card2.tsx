@@ -1,17 +1,14 @@
 import React from 'react';
-import Heading1 , {Heading2,Heading3} from '../../atoms/Heading/Heading';
-import Icon from '../../atoms/Icon/icon';
-import Image from '../../atoms/Image/Images';
+
 import Styles from '../Card2/card.module.css';
-import Button from '../../atoms/Button/Button';
-import AddIcon from "@mui/icons-material/Add";
+
 import { Grid } from '@mui/material';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import Typography from '../../atoms/Typography/Typography';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import {useNavigate} from 'react-router-dom';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
-import { display } from '@mui/system';
+
 interface Props{
     id:number;
     picturenumber:string;

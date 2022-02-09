@@ -1,15 +1,14 @@
 import React, { MouseEventHandler, useState } from "react";
-import Header2 from "../../components/organisms/LoggedHeader/Header2";
+
 import Footer from "../../components/molecules/footer/Footer";
 import Banner from "../../components/molecules/Banner/Banner";
-import { Grid, IconButton, Input } from "@mui/material";
-import { Search } from "@mui/icons-material";
+import { Grid, Input } from "@mui/material";
+
 import CustomSearch from "../../components/molecules/CustomSearch/CustomSearch";
 import Styles from "./Entrepreneurship.module.css";
 import Typography from "../../components/atoms/Typography/Typography";
 import data from "../input.json";
-import Card from "../../components/molecules/Card/Card";
-import AddIcon from '@mui/icons-material/Add';
+
 import Card2 from '../../components/molecules/Card2/Card2'
 import Header from "../../components/organisms/Header";
 const Entrepreneurship = () => {

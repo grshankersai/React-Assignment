@@ -10,12 +10,12 @@ describe("Button Component", () => {
   });
 
   it("should get button text", () => {
-    render(<Button name="hello" onClick={onClick} />);
+    render(<Button variant="text" onClick={onClick}>hello </Button>);
     expect(screen.getByText("hello")).toBeInTheDocument();
   });
 
   it("should call onclick", () => {
-    const { getByText } = render(<Button name="hello" onClick={onClick} />);
+    const { getByText } = render(<Button variant="text" onClick={onClick} >hello</Button>);
     // eslint-disable-next-line testing-library/prefer-screen-queries
     fireEvent.click(getByText("hello"));
     expect(onClick).toHaveBeenCalled();

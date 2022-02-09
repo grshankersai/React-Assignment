@@ -1,4 +1,4 @@
-import Header2 from "../../components/organisms/LoggedHeader/Header2";
+
 import Footer from "../../components/molecules/footer/Footer";
 import Typographys from "../../components/atoms/Typography/Typography";
 import { createMuiTheme, Grid, Tab, Tabs, ThemeProvider } from "@mui/material";

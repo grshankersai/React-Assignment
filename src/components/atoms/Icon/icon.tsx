@@ -12,7 +12,7 @@ const Icon = (props:Props)=>{
 
     return (
         <SvgIcon >
-      <path d={props.dValue} />
+      <path data-testid='myele' d={props.dValue} />
         </SvgIcon>
     )
 }
