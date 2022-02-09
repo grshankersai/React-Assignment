@@ -240,7 +240,7 @@ const Entrepreneurship = () => {
 
 
   return (
-    <div>
+    <div data-testid="explore-page">
       <Header />
       <Grid container> 
         <Grid
@@ -256,6 +256,7 @@ const Entrepreneurship = () => {
         <Grid item xs={12} marginLeft={10}>
           <div className={Styles.input}>
             <Input
+            data-testid="searchInput"
               startAdornment={<CustomSearch />}
               placeholder="Search by Title or Author"
               name="text"

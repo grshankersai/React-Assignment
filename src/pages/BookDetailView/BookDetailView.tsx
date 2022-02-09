@@ -62,11 +62,11 @@ const BookDetailView = () => {
   return (
     <ThemeProvider theme={customTheme}>
       <Header />
-      <Grid container spacing={3}>
+      <Grid container spacing={3} >
         <Grid item xs={7} marginLeft={22} marginBottom={5}>
           <Typographys data-testid="Test1" variant={"body2"} content={"Get the key ideas from"} />
         </Grid>
-        <Grid item xs={6} marginLeft={22}>
+        <Grid item xs={6} marginLeft={22} data-testid="book-info-content">
           <div>
             <Typographys
               variant={"h1"}
@@ -83,9 +83,10 @@ const BookDetailView = () => {
               content={"By Jim Collins and Bill Lazier"}
             />
           </div>
-          <div className={Styles.frame}>
+          <div className={Styles.frame} data-testid="timeTaken">
             <TimeIcon fontSize="small" />
             <Typographys
+               
               variant="caption3"
               content="15-minutes read"
               styles={{ marginLeft: "10px" }}
@@ -93,6 +94,7 @@ const BookDetailView = () => {
           </div>
           <div style={{ marginBottom: "30px" }}>
             <CustomButton
+            data-testid="toexist"
               variant="outlined"
               sx={{
                 width: "122px",
@@ -108,8 +110,10 @@ const BookDetailView = () => {
             >
               Read Now
             </CustomButton>
+            <span data-testid="navigate-btn">
             <CustomButton
               variant="contained"
+              
               onClick={() => { itemlist[9].readstatus = "Finished"; navigate('/'); }}
               sx={{
                 color: "black",
@@ -129,7 +133,11 @@ const BookDetailView = () => {
             >
               Finished
             </CustomButton>
+              
+            </span>
+            <span data-testid="toexist">
             <CustomButton
+            
               variant="text"
               endIcon={<AiOutlineArrowRight />}
               sx={{
@@ -148,17 +156,20 @@ const BookDetailView = () => {
             >
               send to kindle
             </CustomButton>
+
+            </span>
+            
           </div>
         </Grid>
         <Grid item xs={3}>
-          <img src="pictures/pic1.png" alt="ent-pic" />
+          <img src="pictures/pic1.png" alt="ent-pic" data-testid="book-image" />
         </Grid>
 
         <Grid item xs={6} marginLeft={22}>
           <div>
             <Tabs
               value={value}
-              onChange={() => {}}
+              data-testid="toexist"
               aria-label="wrapped label tabs example"
               textColor="primary"
               indicatorColor="primary"
@@ -185,7 +196,7 @@ const BookDetailView = () => {
               />
             </Tabs>
           </div>
-          <div>
+          <div data-testid="tabpanel">
             <Typographys
               variant="caption3"
               styles={{ marginTop: "15px", textAlign: "justify",lineHeight:3 }}
@@ -197,7 +208,7 @@ const BookDetailView = () => {
           
         </Grid> 
         
-        <Grid xs={12}>
+        <Grid xs={12} data-testid="toexist">
          <div className={Styles.line}></div>
         </Grid>
       </Grid>
