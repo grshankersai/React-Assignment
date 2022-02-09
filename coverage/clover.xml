@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1644425445440" clover="3.2.0">
-  <project timestamp="1644425445441" name="All files">
-    <metrics statements="182" coveredstatements="100" conditionals="44" coveredconditionals="26" methods="78" coveredmethods="53" elements="304" coveredelements="179" complexity="0" loc="182" ncloc="182" packages="21" files="38" classes="38"/>
+<coverage generated="1644425744622" clover="3.2.0">
+  <project timestamp="1644425744622" name="All files">
+    <metrics statements="181" coveredstatements="100" conditionals="44" coveredconditionals="26" methods="78" coveredmethods="53" elements="303" coveredelements="179" complexity="0" loc="181" ncloc="181" packages="21" files="38" classes="38"/>
     <package name="src">
       <metrics statements="17" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="3" coveredmethods="0"/>
       <file name="App.tsx" path="C:\Users\G R SHANKER SAI\Desktop\ZEMOSO\TypeScript+React_UZ\Blinkist_Project\my-app\src\App.tsx">
@@ -332,7 +332,7 @@
       </file>
     </package>
     <package name="src.pages.Entrepreneurship">
-      <metrics statements="21" coveredstatements="17" conditionals="4" coveredconditionals="4" methods="14" coveredmethods="12"/>
+      <metrics statements="20" coveredstatements="17" conditionals="4" coveredconditionals="4" methods="14" coveredmethods="12"/>
       <file name="Entrepreneurship.stories.tsx" path="C:\Users\G R SHANKER SAI\Desktop\ZEMOSO\TypeScript+React_UZ\Blinkist_Project\my-app\src\pages\Entrepreneurship\Entrepreneurship.stories.tsx">
         <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="12" count="0" type="stmt"/>
@@ -340,11 +340,10 @@
         <line num="18" count="0" type="stmt"/>
       </file>
       <file name="Entrepreneurship.tsx" path="C:\Users\G R SHANKER SAI\Desktop\ZEMOSO\TypeScript+React_UZ\Blinkist_Project\my-app\src\pages\Entrepreneurship\Entrepreneurship.tsx">
-        <metrics statements="18" coveredstatements="17" conditionals="4" coveredconditionals="4" methods="13" coveredmethods="12"/>
+        <metrics statements="17" coveredstatements="17" conditionals="4" coveredconditionals="4" methods="13" coveredmethods="12"/>
         <line num="14" count="1" type="stmt"/>
         <line num="17" count="6" type="stmt"/>
         <line num="19" count="5" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
         <line num="24" count="5" type="stmt"/>
         <line num="26" count="1" type="stmt"/>
         <line num="34" count="10" type="cond" truecount="2" falsecount="0"/>

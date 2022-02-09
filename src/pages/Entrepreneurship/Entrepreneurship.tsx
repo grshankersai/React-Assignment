@@ -17,7 +17,7 @@ const Entrepreneurship = () => {
   const [search,setSearch] = useState("");
 
   const modifyData= (id:number)=>{
-    console.log(id);
+    
     
   }
 
