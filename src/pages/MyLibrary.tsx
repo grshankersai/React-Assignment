@@ -80,7 +80,7 @@ const MyLibrary = () => {
 
   const renderCards= ()=>{
     return(
-      <Grid item xs={7}>
+      <Grid item xs={7} data-testid="card-grid">
       {data
         .filter((item) => {
           return item.readstatus == tabs;
@@ -110,7 +110,7 @@ const MyLibrary = () => {
   }
 
   return (
-    <div>
+    <div data-testid="myLibrary">
       <Header />
 
       <Grid
@@ -119,11 +119,12 @@ const MyLibrary = () => {
         alignItems="center"
         justifyContent="space-around"
       >
-        <Grid item xs={12} paddingLeft={22} className={Styles.mainheading}>
+        <Grid item xs={12} paddingLeft={22} className={Styles.mainheading} data-testid="Header">
           <Typographys
             variant="h1"
             content="My Library"
             styles={{ marginBottom: "10px" }}
+            
           />
         </Grid>
         <Grid item xs={12} paddingLeft={22} className={Styles.mainheading}>
