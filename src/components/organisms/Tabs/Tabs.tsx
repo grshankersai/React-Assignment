@@ -18,10 +18,10 @@ const customTheme = createMuiTheme({
 export default function ColorTabs(props:any) {
   const [value, setValue] = React.useState('one');
 
-  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
-    setValue(newValue);
+   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
+     setValue(newValue);
    
-  };
+   };
 
   return (
     <ThemeProvider theme={customTheme}>
@@ -37,9 +37,10 @@ export default function ColorTabs(props:any) {
               backgroundColor: "#22C870"
              }
             }}
+        
       >
-        <Tab value="one" label="Currently Reading"  onClick={()=>{props.displayCards("currentlyReading")}} />
-        <Tab value="two" label="Finished" onClick={()=>{props.displayCards("Finished")}}/>
+        <Tab value="one" style={{marginRight:"100px"}} label="Currently Reading"  onClick={()=>{props.displayCards("currentlyReading")}} />
+        <Tab value="two" style={{marginRight:"100px"}} label="Finished" onClick={()=>{props.displayCards("Finished")}}/>
         
       </Tabs>
     </Box>

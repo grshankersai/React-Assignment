@@ -18,16 +18,16 @@ import Typography2 from "@mui/material/Typography";
 
 const Header = () => {
 
-  const {loginWithRedirect , logout , user , isAuthenticated} = useAuth0();
+  // const {loginWithRedirect , logout , user , isAuthenticated} = useAuth0();
 
-  const Login = ()=>{
-    loginWithRedirect();
-    console.log(user);
-  }
+  // const Login = ()=>{
+  //   loginWithRedirect();
+  //   console.log(user);
+  // }
 
-  const Logout = ()=>{
-    logout();
-  }
+  // const Logout = ()=>{
+  //   logout();
+  // }
 
   return (
     <div id={Styles.maindiv}>

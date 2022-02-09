@@ -18,6 +18,6 @@ describe("Button Component", () => {
     const { getByText } = render(<Button variant="text" onClick={onClick} >hello</Button>);
     // eslint-disable-next-line testing-library/prefer-screen-queries
     fireEvent.click(getByText("hello"));
-    expect(onClick).toHaveBeenCalled();
+    expect(onClick).toHaveBeenCalled();   
   });
 });
