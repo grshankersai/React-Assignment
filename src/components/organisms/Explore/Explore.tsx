@@ -29,7 +29,7 @@ import {useNavigate} from 'react-router-dom';
 const Menu = ()=>{
     const navigate = useNavigate();
     return (
-        <div className={Styles.menu}>
+        <div className={Styles.menu} data-testid="menu">
             <Grid container>
                 <Grid item xs={2}></Grid>
                 <Grid item xs={8}>
@@ -46,44 +46,44 @@ const Menu = ()=>{
                     </Grid>
                     {/* Row - 1 */}
                     <Grid container padding={1}>
-                        <Grid item xs={4} onClick={()=>{navigate('/entrepreneurship')}}><MenuItem content={"Entrepreneurship"} emoji={NotificationsNoneIcon}/></Grid>
-                        <Grid item xs={4}><MenuItem content={"Politics"} emoji={AccountBalanceIcon}/></Grid>
-                        <Grid item xs={4}><MenuItem content={"Marketing & Sales"} emoji={TimelineIcon}/></Grid>
+                        <Grid data-testid="menuitem" item xs={4} onClick={()=>{navigate('/entrepreneurship')}}><MenuItem content={"Entrepreneurship"} emoji={NotificationsNoneIcon}/></Grid>
+                        <Grid data-testid="menuitem" item xs={4}><MenuItem content={"Politics"} emoji={AccountBalanceIcon}/></Grid>
+                        <Grid data-testid="menuitem" item xs={4}><MenuItem content={"Marketing & Sales"} emoji={TimelineIcon}/></Grid>
 
                     </Grid> 
                     {/* Row - 2 */}
                     <Grid container padding={1}>
-                        <Grid item xs={4}><MenuItem content={"Science"} emoji={ScienceIcon}/></Grid>
-                        <Grid item xs={4}><MenuItem content={"Health & Nutrition"} emoji={LocalHospitalIcon}/></Grid>
-                        <Grid item xs={4}><MenuItem content={"Personal Development"} emoji={SignalCellularAltIcon}/></Grid>
+                        <Grid data-testid="menuitem" item xs={4}><MenuItem content={"Science"} emoji={ScienceIcon}/></Grid>
+                        <Grid data-testid="menuitem" item xs={4}><MenuItem content={"Health & Nutrition"} emoji={LocalHospitalIcon}/></Grid>
+                        <Grid data-testid="menuitem" item xs={4}><MenuItem content={"Personal Development"} emoji={SignalCellularAltIcon}/></Grid>
 
                     </Grid>  
                     {/* Row - 3 */}
                     <Grid container padding={1}>
-                        <Grid item xs={4}><MenuItem content={"Economics"} emoji={PublicIcon}/></Grid>
-                        <Grid item xs={4}><MenuItem content={"History"} emoji={TempleBuddhistIcon}/></Grid>
-                        <Grid item xs={4}><MenuItem content={"Communication Skills"} emoji={ChatIcon}/></Grid>
+                        <Grid data-testid="menuitem" item xs={4}><MenuItem content={"Economics"} emoji={PublicIcon}/></Grid>
+                        <Grid data-testid="menuitem" item xs={4}><MenuItem content={"History"} emoji={TempleBuddhistIcon}/></Grid>
+                        <Grid data-testid="menuitem" item xs={4}><MenuItem content={"Communication Skills"} emoji={ChatIcon}/></Grid>
 
                     </Grid> 
                     {/* Row - 4 */}
                     <Grid container padding={1}>
-                        <Grid item xs={4}><MenuItem content={"Corporate Culture"} emoji={BusinessCenterIcon}/></Grid>
-                        <Grid item xs={4}><MenuItem content={"Motivation & Inspiration"} emoji={EmojiObjectsIcon}/></Grid>
-                        <Grid item xs={4}><MenuItem content={"Money & Investments"} emoji={AccountBalanceWalletIcon}/></Grid>
+                        <Grid data-testid="menuitem" item xs={4}><MenuItem content={"Corporate Culture"} emoji={BusinessCenterIcon}/></Grid>
+                        <Grid data-testid="menuitem" item xs={4}><MenuItem content={"Motivation & Inspiration"} emoji={EmojiObjectsIcon}/></Grid>
+                        <Grid data-testid="menuitem" item xs={4}><MenuItem content={"Money & Investments"} emoji={AccountBalanceWalletIcon}/></Grid>
 
                     </Grid> 
                     {/* Row - 5 */}
                     <Grid container padding={1}>
-                        <Grid item xs={4}><MenuItem content={"Psychology"} emoji={PsychologyIcon}/></Grid>
-                        <Grid item xs={4}><MenuItem content={"Productivity"} emoji={HourglassBottomIcon}/></Grid>
-                        <Grid item xs={4}><MenuItem content={"Sex & Relationship"} emoji={FavoriteBorderIcon}/></Grid>
+                        <Grid data-testid="menuitem" item xs={4}><MenuItem content={"Psychology"} emoji={PsychologyIcon}/></Grid>
+                        <Grid data-testid="menuitem" item xs={4}><MenuItem content={"Productivity"} emoji={HourglassBottomIcon}/></Grid>
+                        <Grid  data-testid="menuitem" item xs={4}><MenuItem content={"Sex & Relationship"} emoji={FavoriteBorderIcon}/></Grid>
 
                     </Grid> 
                     {/* Row - 6 */}
                     <Grid container padding={1}>
-                        <Grid item xs={4}><MenuItem content={"Nature & Environment"} emoji={YardIcon}/></Grid>
-                        <Grid item xs={4}><MenuItem content={"Career & Success"} emoji={TrackChangesIcon}/></Grid>
-                        <Grid item xs={4}><MenuItem content={"Education"} emoji={SchoolOutlinedIcon}/></Grid>
+                        <Grid data-testid="menuitem" item xs={4}><MenuItem content={"Nature & Environment"} emoji={YardIcon}/></Grid>
+                        <Grid data-testid="menuitem" item xs={4}><MenuItem content={"Career & Success"} emoji={TrackChangesIcon}/></Grid>
+                        <Grid data-testid="menuitem" item xs={4}><MenuItem content={"Education"} emoji={SchoolOutlinedIcon}/></Grid>
 
                     </Grid> 
                     
@@ -123,6 +123,8 @@ const Explore = ()=>{
                 return !prev;
             })
         }}
+
+        data-testid="explore-button"
         onMouseOver={()=>{
             setUline(true);
         }}

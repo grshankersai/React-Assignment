@@ -1,10 +1,8 @@
 import React from "react";
 
-//importing material UI Components
 
-import AppBar from "@mui/material/AppBar";
 
-import Toolbar from "@mui/material/Toolbar";
+
 import Typography from "../atoms/Typography/Typography";
 
 import SearchIcon from "@mui/icons-material/Search";
@@ -33,15 +31,15 @@ const Header = () => {
 
   return (
     <div id={Styles.maindiv}>
-      <Grid container>
+      <Grid container data-testid="main-header">
         <Grid item xs={1}></Grid>
         <Grid item xs={1}>
-          <img src="logo.png" alt="icon" className={Styles.image} />
+          <img data-testid="blinkist-logo" src="logo.png" alt="icon" className={Styles.image} />
         </Grid>
         <Grid item xs={1}>
-          <SearchIcon className={Styles.icon} />
+          <SearchIcon data-testid="searchIcon-button" className={Styles.icon} />
         </Grid>
-        <Grid item xs={1}>
+        <Grid item xs={1}  >
         <Explore />
         </Grid>
         <Grid item xs={4}  >
@@ -51,18 +49,21 @@ const Header = () => {
       
 
         <Grid item xs={1} >
-          {/* <div className={Styles.root}>
-          <div className={Styles.text} onClick={()=>{isAuthenticated?Logout():Login()}}><Typography variant={"body1"} content={"Account"} styles={{marginTop:"0px",marginBottom:'15px',cursor: "pointer"}}/></div>
+           <div className={Styles.root} data-testid="account-dropdown-button">
+          <div className={Styles.text} ><Typography variant={"body1"} content={"Account"} styles={{marginTop:"0px",marginBottom:'15px',cursor: "pointer"}}/></div>
           <KeyboardArrowDownIcon />
-          </div> */}
-            {
+          </div> 
+
+          {/* UNCOMMENT FOR AUTHENTICATION */}
+
+            {/*
           isAuthenticated?(<div onClick={()=>{isAuthenticated?Logout():Login()}}>
             <Typography2 variant="body1" id={Styles.inblock}><CustomAvatar/></Typography2>
             <KeyboardArrowDownIcon />
             </div>):(<div className={Styles.root}>
           <div className={Styles.text} onClick={()=>{isAuthenticated?Logout():Login()}}><Typography variant={"body1"} content={"Account"} styles={{marginTop:"0px",marginBottom:'15px',cursor: "pointer"}}/></div>
           <KeyboardArrowDownIcon /></div>)
-        }
+            */ }
         
         </Grid>
         <Grid item xs={1}> </Grid>
