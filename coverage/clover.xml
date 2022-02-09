@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1644399078198" clover="3.2.0">
-  <project timestamp="1644399078198" name="All files">
+<coverage generated="1644400510634" clover="3.2.0">
+  <project timestamp="1644400510634" name="All files">
     <metrics statements="202" coveredstatements="26" conditionals="50" coveredconditionals="2" methods="89" coveredmethods="14" elements="341" coveredelements="42" complexity="0" loc="202" ncloc="202" packages="22" files="39" classes="39"/>
     <package name="src">
       <metrics statements="17" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="3" coveredmethods="0"/>
@@ -186,7 +186,7 @@
       <file name="CustomSearch.tsx" path="C:\Users\G R SHANKER SAI\Desktop\ZEMOSO\TypeScript+React_UZ\Blinkist_Project\my-app\src\components\molecules\CustomSearch\CustomSearch.tsx">
         <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
         <line num="8" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
       </file>
