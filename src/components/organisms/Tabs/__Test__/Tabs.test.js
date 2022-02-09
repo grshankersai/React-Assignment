@@ -3,7 +3,7 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import MyLibraryTab from "../Tabs";
 import "@testing-library/jest-dom";
 
-const displayCards = jest.fn();
+const displayCardsa = jest.fn();
 describe("Tabs-Testing",()=>{
     test("should display the myLibrary tab", async () => {
         render(<MyLibraryTab />);
@@ -17,7 +17,7 @@ describe("Tabs-Testing",()=>{
         expect(tabs[1].textContent).toBe("Finished");
       });
 
-      test("should display the currently reading tab panel on clicking currently reading tab button", async () => {
+      test("should display the currently reading tab panel on clicking currently reading tab button",  () => {
         render(<MyLibraryTab />);
         const tabs = screen.getAllByRole("tab");
         expect(tabs).toBeTruthy();
@@ -25,6 +25,24 @@ describe("Tabs-Testing",()=>{
         
         
       });
+
+      test("The First Tab",()=>{
+        render(<MyLibraryTab displayCards={displayCardsa}/>)
+        const tabs = screen.getAllByRole("tab");
+        expect(tabs).toBeTruthy();
+        expect(tabs[0].textContent).toBe("Currently Reading");
+        fireEvent.click(tabs[0]);
+
+      })
+
+      test("The Second Tab",()=>{
+        render(<MyLibraryTab displayCards={displayCardsa}/>)
+        const tabs = screen.getAllByRole("tab");
+        expect(tabs).toBeTruthy();
+        expect(tabs[1].textContent).toBe("Finished");
+        fireEvent.click(tabs[1]);
+
+      })
 
 })
 

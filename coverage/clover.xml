@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1644421277771" clover="3.2.0">
-  <project timestamp="1644421277771" name="All files">
-    <metrics statements="182" coveredstatements="89" conditionals="44" coveredconditionals="24" methods="78" coveredmethods="43" elements="304" coveredelements="156" complexity="0" loc="182" ncloc="182" packages="21" files="38" classes="38"/>
+<coverage generated="1644421932440" clover="3.2.0">
+  <project timestamp="1644421932441" name="All files">
+    <metrics statements="182" coveredstatements="92" conditionals="44" coveredconditionals="24" methods="78" coveredmethods="46" elements="304" coveredelements="162" complexity="0" loc="182" ncloc="182" packages="21" files="38" classes="38"/>
     <package name="src">
       <metrics statements="17" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="3" coveredmethods="0"/>
       <file name="App.tsx" path="C:\Users\G R SHANKER SAI\Desktop\ZEMOSO\TypeScript+React_UZ\Blinkist_Project\my-app\src\App.tsx">
@@ -245,21 +245,21 @@
       </file>
     </package>
     <package name="src.components.organisms.Tabs">
-      <metrics statements="9" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="1"/>
+      <metrics statements="9" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="4"/>
       <file name="Tabs.stories.tsx" path="C:\Users\G R SHANKER SAI\Desktop\ZEMOSO\TypeScript+React_UZ\Blinkist_Project\my-app\src\components\organisms\Tabs\Tabs.stories.tsx">
         <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="11" count="0" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
       </file>
       <file name="Tabs.tsx" path="C:\Users\G R SHANKER SAI\Desktop\ZEMOSO\TypeScript+React_UZ\Blinkist_Project\my-app\src\components\organisms\Tabs\Tabs.tsx">
-        <metrics statements="7" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
         <line num="7" count="2" type="stmt"/>
-        <line num="19" count="4" type="stmt"/>
-        <line num="21" count="4" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="26" count="4" type="stmt"/>
-        <line num="42" count="0" type="stmt"/>
-        <line num="43" count="0" type="stmt"/>
+        <line num="19" count="7" type="stmt"/>
+        <line num="21" count="7" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="26" count="7" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.pages">
